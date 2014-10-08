@@ -1,6 +1,8 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
+#include<iostream>
+
 class matrix
 {
 
@@ -30,6 +32,15 @@ class matrix
     void rell();
     void rellenar();
     void showMatrixT();
+
+    matrix& operator +(const matrix &valor);
+    matrix& operator -(const matrix &valor);
+    matrix& operator *(const matrix &valor);
+
+
+    friend ostream& operator <<(ostream &os, const matrix &valor);
+
+
 
 
 };

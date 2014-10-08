@@ -13,21 +13,28 @@ int main()
 
     a.rellenar();
     a.showMatrix();
-    cout << endl;
-
-//    b.rellenar();
-//    b.showMatrix();
 //    cout << endl;
 
-
-/*
-    b.transpuesta(a);
+    b.rellenar();
     b.showMatrix();
-*/
+//    cout << endl;
 
-    a.escalar(5);
-    a.showMatrix();
-    cout << endl;
+    c = a + b;
+
+    c.showMatrix();
+
+ //   cout << endl;
+
+    c = a - b;
+
+    c.showMatrix();
+
+//    cout << endl;
+
+    c = a * b;
+
+    cout<<c<<"/n";
+
 
 
     return 0;
