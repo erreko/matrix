@@ -1,5 +1,7 @@
 #include "matrix.h"
 #include<iostream>
+#include<fstream>
+
 
 using namespace std;
 
@@ -210,22 +212,73 @@ matrix &matrix:: operator *(const matrix &valor)
 
 
 
-friend ostream operator <<(ostream &o, const matrix &a)
+/*friend ostream operator <<(ostream &os, const matrix &valor)
 {
-    o <<"Rows: "<<a.rows<<", Cols: "<<a.cols<<"\n";
-    for(int i = 0; i<a.rows; i++)
+
+}
+*/
+void matrix::rellenar2(string c)
+{
+    int i = 0;
+    int j = 0;
+    ifstream file;
+    file.open(c.c_str());
+    if(file.is_open())
     {
-        for(int j = 0; j<a.cols; j++)
-        {
-            o<<a.m[i][j]<<" ";
-        }
-        o<<"\n";
+        file >> this->rows;
+        file >> this->cols;
+
+              this->m = new int* [rows];
+
+              for(i=0;i<this->rows;i++)
+              {
+                  this->m[i]= new int [cols];
+              }
+
+              for(i = 0;i<this->rows;i++)
+              {
+                  for(j = 0;j<this->cols;j++)
+                  {
+                      file >> this->m[i][j];
+
+                  }
+              }
+
+     file.close();
+
     }
-    return o;
+
 }
 
 
+void matrix::imprimir(string c)
+{
+    int i = 0;
+    int j = 0;
+    ofstream file;
+    file.open(c.c_str());
+    if(file.is_open())
+    {
+        file << this->rows << " "<< this->cols<<endl;
+
+
+              for(i = 0;i<this->rows;i++)
+              {
+                  for(j = 0;j<this->cols;j++)
+                  {
+                      file << this->m[i][j] << " ";
+
+                  }
+
+                  file << endl;
+              }
+
+      file.close();
 
 
 
+
+    }
+
+}
 

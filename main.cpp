@@ -1,40 +1,45 @@
 #include "matrix.h"
 #include<iostream>
+#include<fstream>
+
 
 
 using namespace std;
 
 int main()
 {
-    matrix a(3,3);
-    matrix b(3,3);
-    matrix c(3,3);
+    matrix a;
 
 
-    a.rellenar();
+
+ /*   a.rellenar();
     a.showMatrix();
-//    cout << endl;
+    cout << endl;
 
     b.rellenar();
     b.showMatrix();
-//    cout << endl;
+    cout << endl;
 
     c = a + b;
 
     c.showMatrix();
 
- //   cout << endl;
+    cout << endl;
 
     c = a - b;
 
     c.showMatrix();
 
-//    cout << endl;
+    cout << endl;
 
     c = a * b;
+*/
 
-    cout<<c<<"/n";
+    a.rellenar2("123.txt");
+    a.showMatrix();
 
+
+    a.imprimir("txt2.txt");
 
 
     return 0;

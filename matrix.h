@@ -1,7 +1,8 @@
 #ifndef MATRIX_H
 #define MATRIX_H
-
+#include<fstream>
 #include<iostream>
+using namespace std;
 
 class matrix
 {
@@ -38,9 +39,10 @@ class matrix
     matrix& operator *(const matrix &valor);
 
 
-    friend ostream& operator <<(ostream &os, const matrix &valor);
+//    friend ostream& operator <<(ostream &os, const matrix &valor);
 
-
+    void rellenar2(string c);
+    void imprimir(string c);
 
 
 };
