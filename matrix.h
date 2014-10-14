@@ -39,10 +39,12 @@ class matrix
     matrix& operator *(const matrix &valor);
 
 
-//    friend ostream& operator <<(ostream &os, const matrix &valor);
+    friend ostream& operator <<(ostream &os, const matrix &valor);
 
     void rellenar2(string c);
     void imprimir(string c);
+
+
 
 
 };

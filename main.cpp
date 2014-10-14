@@ -36,7 +36,8 @@ int main()
 */
 
     a.rellenar2("123.txt");
-    a.showMatrix();
+
+    cout<<a<<endl;
 
 
     a.imprimir("txt2.txt");

@@ -211,12 +211,19 @@ matrix &matrix:: operator *(const matrix &valor)
 }
 
 
-
-/*friend ostream operator <<(ostream &os, const matrix &valor)
+ostream& operator <<(ostream &os, const matrix &valor)
 {
-
+    for(int i = 0; i<valor.rows; i++)
+    {
+        for(int j = 0; j<valor.cols; j++)
+        {
+            os<<valor.m[i][j]<<" ";
+        }
+        os<<"\n";
+    }
+    return os;
 }
-*/
+
 void matrix::rellenar2(string c)
 {
     int i = 0;
